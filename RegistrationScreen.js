@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button, Image } from 'react-native';
 import styles from '../assets/appstyles';
 
 export default function RegistrationScreen() {
@@ -26,6 +26,7 @@ export default function RegistrationScreen() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('./logo.png')} style={styles.logo} />
       <Text style={styles.title}>Register</Text>
             <TextInput
         style={styles.input}
@@ -78,3 +79,4 @@ export default function RegistrationScreen() {
     </View>
   );
 }
+
