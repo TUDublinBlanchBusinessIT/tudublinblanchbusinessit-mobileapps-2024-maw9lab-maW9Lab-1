@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { View, Text, TextInput, Button,  StyleSheet } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
+import styles from './assets/appstyles';
+
 
 // Create the Tab Navigator
 const Tab = createMaterialTopTabNavigator();
@@ -66,35 +68,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-// Styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  input: {
-    width: '100%',
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginBottom: 10,
-  },
-  picker: {
-    width: '100%',
-    height: 40,
-  },
-  selectedColorText: {
-    marginTop: 20,
-    fontSize: 18,
-  },
-});
