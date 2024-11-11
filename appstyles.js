@@ -7,6 +7,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
   },
+    logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 10,
+    resizeMode: 'contain',
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -31,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles; 
+export default styles;
