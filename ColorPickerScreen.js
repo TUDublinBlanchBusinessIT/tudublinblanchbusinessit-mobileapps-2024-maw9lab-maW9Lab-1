@@ -16,7 +16,7 @@ export default function ColorPickerScreen() {
         selectedValue={selectedColor}
         onValueChange={setSelectedColor}
       >
-        {/* Use .map() to dynamically render Picker.Item */}
+        
         {colorList.map((color, index) => (
           <Picker.Item key={index} label={color} value={color} />
         ))}
@@ -25,3 +25,4 @@ export default function ColorPickerScreen() {
     </View>
   );
 }
+
