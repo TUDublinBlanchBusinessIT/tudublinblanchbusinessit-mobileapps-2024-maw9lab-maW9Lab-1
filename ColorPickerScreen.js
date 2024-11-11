@@ -6,6 +6,8 @@ import styles from '../assets/appstyles';
 export default function ColorPickerScreen() {
   const [selectedColor, setSelectedColor] = useState("Red");
 
+  const [colorList] = useState(["Red", "Blue", "Green", "Yellow", "Purple"]);
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Pick Your Favorite Color</Text>
@@ -14,8 +16,10 @@ export default function ColorPickerScreen() {
         selectedValue={selectedColor}
         onValueChange={setSelectedColor}
       >
-        <Picker.Item label="Red" value="Red" />
-        <Picker.Item label="Blue" value="Blue" />
+        {/* Use .map() to dynamically render Picker.Item */}
+        {colorList.map((color, index) => (
+          <Picker.Item key={index} label={color} value={color} />
+        ))}
       </Picker>
       <Text style={styles.selectedColorText}>Selected Color: {selectedColor}</Text>
     </View>
